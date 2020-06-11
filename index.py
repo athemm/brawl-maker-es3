@@ -1,8 +1,3 @@
-"""
-list(mydict.keys())[list(mydict.values()).index("value here")]
-
-GETS KEY FROM VALUE
-"""
 import datetime
 
 x = datetime.datetime.now()
@@ -78,6 +73,8 @@ while bro < 693:
             somec = 0
             gogo += 1
             print(b_list)
+            for i in range(0, len(b_list)): 
+                b_list[i] = int(b_list[i]) 
             if gogo != 21:
                 out.write(str(b_list) + ",")
             else:
@@ -90,20 +87,3 @@ while bro < 693:
 print(gogo, "lines processed")
 out.close()
 save.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
