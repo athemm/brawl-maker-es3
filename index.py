@@ -20,7 +20,9 @@ bl = dict(
     y_bush = "4",
     g_bush = "3",
     sp_b = "1",
-    sp_r = "2"
+    sp_r = "2",
+    sd_box = "16",
+    heist_safe = "12"
 )
 
 out = open(file_thing + ".es3", "w+")
@@ -54,7 +56,9 @@ while bro < 693:
         elif line.strip()[indexc] == "R":
             b_list.append(bl["g_bush"])
         elif line.strip()[indexc] == "Y":
-            b_list.append(bl["cactus"])
+            b_list.append(bl["crate"])
+        elif line.strip()[indexc] == "8":
+            b_list.append(bl["heist_safe"])            
         elif line.strip()[indexc] == "C":
             b_list.append(bl["barrel"])
         elif line.strip()[indexc] == "1":
@@ -63,6 +67,12 @@ while bro < 693:
             b_list.append(bl["sp_r"])
         elif line.strip()[indexc] == "B":
             b_list.append(bl["bone"])
+        elif line.strip()[indexc] == "4":
+            b_list.append(bl["sd_box"])            
+        elif line.strip()[indexc] == "N":
+            b_list.append(bl["fence"])            
+        elif line.strip()[indexc] == "T":
+            b_list.append(bl["cactus"])            
         elif line.strip()[indexc] == ".":
             b_list.append(bl["no"])
         else:
@@ -74,7 +84,8 @@ while bro < 693:
             gogo += 1
             print(b_list)
             for i in range(0, len(b_list)): 
-                b_list[i] = int(b_list[i]) 
+                b_list[i] = int(b_list[i])
+            b_list.reverse()
             if gogo != 21:
                 out.write(str(b_list) + ",")
             else:
