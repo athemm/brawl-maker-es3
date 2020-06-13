@@ -1,0 +1,7 @@
+{
+    "_info": "SUPPORTED MAP SIZES: 1 (21x33) or 2 (60x60)",
+    "mapSize": "1",
+    "mapName": "Configure in config.json",
+    "mapAuthor": "Configure in config.json",
+    "fileName": "sample.txt"
+}
